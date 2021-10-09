@@ -257,9 +257,9 @@ class LatestEntriesPlugin(CMSPlugin):
 
     def __str__(self):
         """
-        must return a unicode string
+        must return a string
         """
-        return self.latest_entries
+        return str(self.latest_entries)
 
     def copy_relations(self, oldinstance):
         self.tags = oldinstance.tags.all()

@@ -5,7 +5,7 @@ from aldryn_blog import __version__
 REQUIREMENTS = [
     'django-taggit>=0.23.0',
     'django-filer',
-    'django_select2==5.11.1,<6',
+    'django_select2',
     'djangocms-text-ckeditor',
     'django-appconf',
     'django-classy-tags',
