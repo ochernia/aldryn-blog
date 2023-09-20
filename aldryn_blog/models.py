@@ -12,7 +12,7 @@ from django.db import models
 from django.db.models import Q
 from django.template.defaultfilters import slugify
 from django.utils import timezone
-from django.utils.translation import get_language, ugettext_lazy as _, override
+from django.utils.translation import get_language, gettext_lazy as _, override
 
 from app_data import AppDataField
 from cms.utils.i18n import get_current_language

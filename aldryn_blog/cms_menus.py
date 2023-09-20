@@ -5,7 +5,7 @@ except ImportError:
     # Django <= 1.10
     from django.core.urlresolvers import NoReverseMatch
 from django.db.models.signals import post_save, post_delete
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from aldryn_blog.models import Category
 

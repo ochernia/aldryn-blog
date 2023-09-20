@@ -3,7 +3,7 @@ from app_data.forms import multiform_factory
 from django import forms
 from django.template.defaultfilters import slugify
 from django.utils.safestring import mark_safe
-from django.utils.translation import get_language, ugettext
+from django.utils.translation import get_language, gettext
 from django_select2.forms import Select2MultipleWidget
 from hvad.forms import TranslatableModelForm
 from unidecode import unidecode
@@ -80,8 +80,8 @@ class AutoSlugForm(TranslatableModelForm):
     def report_error(self, conflict):
         address = '<a href="%(url)s" target="_blank">%(label)s</a>' % {
             'url': conflict.master.get_absolute_url(),
-            'label': ugettext('the conflicting object')}
-        error_message = ugettext('Conflicting slug. See %(address)s.') % {'address': address}
+            'label': gettext('the conflicting object')}
+        error_message = gettext('Conflicting slug. See %(address)s.') % {'address': address}
         self.append_to_errors(field='slug', message=mark_safe(error_message))
 
     def append_to_errors(self, field, message):
