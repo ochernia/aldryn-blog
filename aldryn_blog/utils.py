@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
 from django.template.defaultfilters import slugify
@@ -17,6 +17,7 @@ def get_blog_languages():
 
 
 def get_blog_authors(coauthors=True):
+    User = get_user_model()
     now = timezone.now()
 
     filters = (
